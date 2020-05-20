@@ -2,7 +2,6 @@ const data = require("../shared/product-data");
 
 module.exports = async function (context, req) {
   try {
-    //const products = data.getProducts();
     const products = context.bindings.inputDocumentIn;
 
     context.res.status(200).json(products);
