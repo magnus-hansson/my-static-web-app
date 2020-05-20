@@ -1,5 +1,4 @@
 {
-  "disabled": false,
   "bindings": [
     {
       "authLevel": "anonymous",
@@ -15,13 +14,14 @@
       "name": "res"
     },
     {
-      "name": "inputDocumentIn",
       "type": "cosmosDB",
+      "name": "inputDocumentIn",
       "databaseName": "mydb",
       "collectionName": "mycol",
       "connectionStringSetting": "CosmosDBConnectionString",
-      "sqlQuery": "SELECT * from c",
-      "direction": "in"
+      "direction": "in",
+      "sqlQuery": "SELECT * from c"
     }
-  ]
+  ],
+  "disabled": false
 }
