@@ -8,7 +8,11 @@
       "methods": ["get"],
       "route": "products"
     },
-
+    {
+      "type": "http",
+      "direction": "out",
+      "name": "res"
+    },
     {
       "name": "inputDocumentIn",
       "type": "cosmosDB",
@@ -17,11 +21,6 @@
       "connectionStringSetting": "CosmosDBConnectionString",
       "sqlQuery": "SELECT * from c",
       "direction": "in"
-    },
-    {
-      "type": "http",
-      "direction": "out",
-      "name": "res"
     }
   ]
 }
