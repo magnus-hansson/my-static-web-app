@@ -12,6 +12,15 @@
       "type": "http",
       "direction": "out",
       "name": "res"
+    },
+    {
+      "name": "inputDocumentIn",
+      "type": "cosmosDB",
+      "databaseName": "mydb",
+      "collectionName": "mycol",
+      "connectionStringSetting": "CosmosDBConnectionString",
+      "sqlQuery": "SELECT * from c",
+      "direction": "in"
     }
   ]
 }
