@@ -8,6 +8,14 @@ const container = database.container("mycol");
 
 module.exports = async function (context, req) {
   try {
+    const products = context.bindings.inputDocumentIn;
+
+    context.res.status(200).json(products);
+  } catch (error) {
+    context.res.status(500).send(error);
+  }
+
+  /* try {
     const querySpec = {
       query: "SELECT * from c",
     };
@@ -19,5 +27,5 @@ module.exports = async function (context, req) {
     context.res.status(200).json(items);
   } catch (error) {
     context.res.status(500).send(error);
-  }
+  } */
 };
